@@ -18,7 +18,13 @@ function makeItTrue() {
 
 // Write a function that takes an array and
 // returns true if the array is empty
-function isEmpty() {}
+function isEmpty(a) {
+  if (a.length < 1) {
+    return true
+  } else {
+    return false
+  }
+}
 
 // Write a function that takes an array
 // and returns the length of the array
@@ -27,9 +33,8 @@ function isEmpty() {}
 // * use the supplied parameters, first and rest
 // * use recursion (the function calls itself)
 function length([first, ...rest]) {
-  return rest.length + length(first)
+  return first === undefined ? 0 : 1 + length(rest)
 }
-
 // Write a function that takes any single value
 // and returns true for truthy values or
 // false for falsey values (review p. 78)
